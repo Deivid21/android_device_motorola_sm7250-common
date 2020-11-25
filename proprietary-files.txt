@@ -633,7 +633,7 @@ vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 
 # Radio
 etc/permissions/privapp-permissions-qti.xml
-product/etc/permissions/telephony_product_privapp-permissions-qti.xml
+product/etc/permissions/telephony_product_privapp-permissions-qti.xml:system_ext/etc/permissions/telephony_system_ext_privapp-permissions-qti.xml
 -system_ext/app/atfwd/atfwd.apk
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 system_ext/etc/permissions/qcrilhook.xml
@@ -793,8 +793,8 @@ framework/moto-telephony.jar:system_ext/framework/moto-telephony.jar
 etc/permissions/moto-telephony.xml:system_ext/etc/permissions/moto-telephony.xml
 
 # Radio - IMS
-product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml
-product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml
+product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml:system_ext/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml
+product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml:system_ext/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml
 -system_ext/app/uceShimService/uceShimService.apk
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml

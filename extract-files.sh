@@ -69,8 +69,9 @@ function blob_fixup() {
         grep -q "libgui_shim.so" "${2}" || "${PATCHELF}" --add-needed libgui_shim.so "${2}"
         ;;
     # Fix xml version
-    product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml | product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml)
+    system_ext/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml | system_ext/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml)
         sed -i 's/xml version="2.0"/xml version="1.0"/' "${2}"
+        sed -i "s/\/product\/framework\//\/system_ext\/framework\//g" "${2}"
         ;;
     system_ext/etc/permissions/moto-telephony.xml)
         sed -i "s|system/framework|system/system_ext/framework|" "${2}"
