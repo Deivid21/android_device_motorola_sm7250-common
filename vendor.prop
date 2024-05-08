@@ -155,7 +155,6 @@ ro.incremental.enable=1
 ro.hardware.keystore_desede=true
 
 # Media
-media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 debug.stagefright.ccodec=1
 debug.stagefright.omx_default_rank=0
 persist.vendor.media.recorder.bt709=true
@@ -224,10 +223,6 @@ debug.sf.early.sf.duration=16000000
 debug.sf.early.app.duration=16500000
 debug.sf.earlyGl.sf.duration=13500000
 debug.sf.earlyGl.app.duration=21000000
-
-# Telephony
-# Disable handling audio direction changes on IMS calls.
-ro.telephony.handle_audio_direction_changes_between_call_state_changes=false
 
 # Time
 persist.vendor.delta_time.enable=true

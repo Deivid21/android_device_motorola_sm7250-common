@@ -29,6 +29,7 @@ debug.sf.enable_hwc_vds=1
 
 # Media
 av.offload.enable=true
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 ro.media.recorder-max-base-layer-fps=60
 vendor.swvdec.log.level=1
 vendor.vidc.debug.level=1
@@ -58,6 +59,10 @@ telephony.lteOnCdmaDevice=1,1
 
 # Sensor
 persist.vendor.sensors.enable.mag_filter=true
+
+# Telephony
+# Disable handling audio direction changes on IMS calls.
+ro.telephony.handle_audio_direction_changes_between_call_state_changes=false
 
 # WiFi
 config.disable_rtt=true
