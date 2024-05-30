@@ -149,11 +149,23 @@ void OverrideCarrierProperties() {
             ro_prop_override(source, "model", "moto g 5G plus", true);
         }
     } else if (bootsku == "XT2113-2") {
-        /* Motorola One 5G Ace (AT&T) */
-        for (const auto &source : RO_PROP_SOURCES) {
-            ro_prop_override(source, "device", "kiev", true);
-            ro_prop_override(source, "model", "motorola one 5G ace", true);
-        }
+            std::string carrier = GetProperty("ro.boot.carrier", "");
+            if (carrier == "tmo") {
+                /* Motorola One 5G Ace (TMO) */
+                for (const auto &source : RO_PROP_SOURCES) {
+                    OverrideProperty("ro.mot.build.customerid", "t");
+                    ro_prop_override(source, "device", "kiev", true);
+                    ro_prop_override(source, "fingerprint", "motorola/kiev_t/kiev:11/RZKS31.Q3-45-16-3-11/49e278:user/release-keys", true);
+                    ro_prop_override(source, "model", "motorola one 5G ace", true);
+                    ro_prop_override(source, "name", "kiev_t", true);
+                }
+            } else {
+                /* Motorola One 5G Ace (RETUS) */
+                for (const auto &source : RO_PROP_SOURCES) {
+                    ro_prop_override(source, "device", "kiev", true);
+                    ro_prop_override(source, "model", "motorola one 5G ace", true);
+                }
+            }
     } else if (bootsku == "XT2113-3") {
         /* Moto G 5G (Unlocked) */
         for (const auto &source : RO_PROP_SOURCES) {
@@ -161,16 +173,16 @@ void OverrideCarrierProperties() {
             ro_prop_override(source, "model", "moto g 5G", true);
         }
     } else if (bootsku == "XT2113-5") {
-        /* Motorola One 5G Ace */
+        /* Motorola One 5G Ace (AT&T) */
         for (const auto &source : RO_PROP_SOURCES) {
             ro_prop_override(source, "device", "kiev", true);
             ro_prop_override(source, "model", "motorola one 5G ace", true);
         }
     } else if (bootsku == "XT2071-3") {
-        /* Motorola Razr 5G (OPENMX) */
+        /* Motorola Razr 5G (RETUS) */
         for (const auto &source : RO_PROP_SOURCES) {
             ro_prop_override(source, "device", "smith", true);
-            ro_prop_override(source, "model", "motorola razr 5G", true);
+            ro_prop_override(source, "model", "motorola razr (2020)", true);
         }
     } else if (bootsku == "XT2071-4") {
         /* Motorola Razr 5G (RETEU) */
@@ -179,11 +191,22 @@ void OverrideCarrierProperties() {
             ro_prop_override(source, "model", "motorola razr 5G", true);
         }
     } else if (bootsku == "XT2071-5") {
-        /* Motorola Razr (2020) (RETUS) */
-        for (const auto &source : RO_PROP_SOURCES) {
-            ro_prop_override(source, "device", "smith", true);
-            ro_prop_override(source, "model", "motorola razr (2020)", true);
-        }
+            std::string carrier = GetProperty("ro.boot.carrier", "");
+            if (carrier == "tmo") {
+                /* Motorola Razr (2020) (TMO) */
+                for (const auto &source : RO_PROP_SOURCES) {
+                    OverrideProperty("ro.mot.build.customerid", "t");
+                    ro_prop_override(source, "device", "smith", true);
+                    ro_prop_override(source, "fingerprint", "motorola/smith_t/smith:12/S2PS32M.57-23-31/82a27f:user/release-keys", true);
+                    ro_prop_override(source, "model", "motorola razr (2020)", true);
+                    ro_prop_override(source, "name", "smith_t", true);
+                }
+            } else {
+                for (const auto &source : RO_PROP_SOURCES) {
+                    ro_prop_override(source, "device", "smith", true);
+                    ro_prop_override(source, "model", "motorola razr 5G", true);
+                }
+            }
     } else if (bootsku == "XT2063-3") {
         /* Motorola Edge (2021) */
         for (const auto &source : RO_PROP_SOURCES) {
