@@ -51,3 +51,8 @@
 
 # Awinic
 /(mnt/vendor/persist|persist)/factory/audio/aw_cali.bin    u:object_r:vendor_persist_audio_file:s0
+
+# cs35l41
+/(mnt/vendor/persist|persist)/factory/audio/spk_ambient   u:object_r:vendor_persist_audio_file:s0
+/(mnt/vendor/persist|persist)/factory/audio/spk_cal_r     u:object_r:vendor_persist_audio_file:s0
+/(mnt/vendor/persist|persist)/factory/audio/spk_f0        u:object_r:vendor_persist_audio_file:s0
