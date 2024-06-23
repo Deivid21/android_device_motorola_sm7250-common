@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+# Add common definitions for Qualcomm
+$(call inherit-product, hardware/qcom-caf/common/common.mk)
+
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/motorola/sm7250-common/sm7250-common-vendor.mk)
 
