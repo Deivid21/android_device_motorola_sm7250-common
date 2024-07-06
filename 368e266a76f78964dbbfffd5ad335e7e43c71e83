@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "95a71720_989533a0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2024-07-06T12:06:22Z",
+      "side": 1,
+      "message": "You didn\u0027t remove reference to these commits from the vendor media configs",
+      "revId": "368e266a76f78964dbbfffd5ad335e7e43c71e83",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
