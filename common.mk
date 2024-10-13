@@ -343,6 +343,9 @@ PRODUCT_PACKAGES += \
 # Moto Live Wallpapers 3
 $(call inherit-product, vendor/motorola/MotoLiveWallpaper3/motolivewallpaper3.mk)
 
+# Moto Time Weather
+$(call inherit-product, vendor/motorola/TimeWeather/timeweather.mk)
+
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
