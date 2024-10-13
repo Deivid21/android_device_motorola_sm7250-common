@@ -529,10 +529,6 @@ vendor/lib64/libqcodec2_platform.so
 vendor/lib64/libqcodec2_utils.so
 vendor/lib64/libqcodec2_v4l2codec.so
 
-# Moto Permissions
-product/etc/permissions/com.motorola.moto-uirefresh.xml
-product/etc/permissions/com.motorola.motodisplay.xml
-
 # mwqem
 system_ext/framework/vendor.qti.data.mwqem-V1.0-java.jar
 system_ext/framework/vendor.qti.hardware.mwqemadapter-V1.0-java.jar
