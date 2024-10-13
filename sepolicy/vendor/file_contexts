@@ -55,3 +55,6 @@
 /(mnt/vendor/persist|persist)/factory/audio/spk_ambient   u:object_r:vendor_persist_audio_file:s0
 /(mnt/vendor/persist|persist)/factory/audio/spk_cal_r     u:object_r:vendor_persist_audio_file:s0
 /(mnt/vendor/persist|persist)/factory/audio/spk_f0        u:object_r:vendor_persist_audio_file:s0
+
+# Label read_ahead_kb in /data partition
+/sys/devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:0/block/sda/queue/read_ahead_kb u:object_r:vendor_sysfs_scsi_host:s0
