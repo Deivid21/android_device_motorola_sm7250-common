@@ -340,6 +340,9 @@ PRODUCT_PACKAGES += \
     MotoActions \
     MotoCommonOverlay
 
+# Moto Live Wallpapers 3
+$(call inherit-product, vendor/motorola/MotoLiveWallpaper3/motolivewallpaper3.mk)
+
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
