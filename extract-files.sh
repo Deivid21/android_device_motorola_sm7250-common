@@ -77,14 +77,22 @@ function blob_fixup() {
             grep -q "libgui_shim.so" "${2}" || "${PATCHELF}" --add-needed libgui_shim.so "${2}"
             ;;
         # Fix xml version
+        system_ext/etc/init/dpmd.rc)
+            [ "$2" = "" ] && return 0
+            sed -i "s|system/system_ext/bin|system_ext/bin|" "${2}"
+            ;;
         system_ext/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml | system_ext/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml)
             [ "$2" = "" ] && return 0
             sed -i 's/xml version="2.0"/xml version="1.0"/' "${2}"
-            sed -i "s/\/product\/framework\//\/system_ext\/framework\//g" "${2}"
+            sed -i "s|system/product/framework|system_ext/framework|" "${2}"
             ;;
         system_ext/etc/permissions/moto-telephony.xml)
             [ "$2" = "" ] && return 0
-            sed -i "s|system/framework|system/system_ext/framework|" "${2}"
+            sed -i "s|system/framework|system_ext/framework|" "${2}"
+            ;;
+        system_ext/etc/permissions/com.qti.dpmframework.xml | system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml | system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml | system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.2-java.xml | system_ext/etc/permissions/dpmapi.xml)
+            [ "$2" = "" ] && return 0
+            sed -i "s|system/system_ext/framework|system_ext/framework|" "${2}"
             ;;
         vendor/etc/permissions/com.motorola.androidx.camera.extensions.xml)
             [ "$2" = "" ] && return 0
