@@ -287,6 +287,10 @@ PRODUCT_PACKAGES += \
     MotoActions \
     MotoCommonOverlay
 
+# Moto Apps
+TARGET_USES_COMPASS := true
+ $(call inherit-product, vendor/motorola/MotApps/motapps.mk)
+
 # Moto Audio Recorder
  $(call inherit-product, vendor/motorola/AudioRecorder/audiorecorder.mk)
 
